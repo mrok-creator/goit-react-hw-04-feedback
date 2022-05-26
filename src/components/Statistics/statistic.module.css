@@ -1,0 +1,18 @@
+.text {
+  font-size: 18px;
+  margin: 0 10px 15px 5px;
+}
+.container {
+  display: block;
+  width: 500px;
+  margin: 0 auto;
+  padding: 15px;
+  border: 1px solid rgb(21, 175, 119);
+  border-radius: 15px;
+  background-color: #5df8ce;
+  transition: 350ms cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.hidden {
+  display: none;
+}
