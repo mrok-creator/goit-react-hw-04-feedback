@@ -1,3 +1,4 @@
+import { memo } from 'react';
 import PropTypes from 'prop-types';
 
 import s from './statistic.module.css';
@@ -22,4 +23,4 @@ Statistic.propTypes = {
   positivePercentage: PropTypes.number.isRequired,
 };
 
-export default Statistic;
+export default memo(Statistic);

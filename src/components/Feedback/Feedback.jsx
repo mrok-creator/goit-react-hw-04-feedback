@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useCallback } from 'react';
 
 import Statistic from 'components/Statistics';
 import FeedbackOptions from 'components/FeedbackOptions';
@@ -14,12 +14,15 @@ function Feedback() {
     bad: 0,
   });
 
-  const handleClick = item => {
-    setState(prevState => ({
-      ...prevState,
-      [item]: prevState[item] + 1,
-    }));
-  };
+  const handleClick = useCallback(
+    item => {
+      setState(prevState => ({
+        ...prevState,
+        [item]: prevState[item] + 1,
+      }));
+    },
+    [setState]
+  );
 
   const items = Object.values(state);
   const total = items.reduce((item, acc) => (acc += item), 0);
